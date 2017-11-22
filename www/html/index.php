@@ -255,12 +255,13 @@ if(isset($_POST['submit'])){
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Contact</h3>
 				<h4 class="white">Phone: +31 634 866 062</h3>
-				<form action="" class="popup-form" method="post">
+				<h4 class="white">Email: contact@tricycle-sec.nl</h3>
+				<!--<form action="" class="popup-form" method="post">
 					<input type="text" required="required" class="form-control form-white" placeholder="Name" name="name">
 					<input type="email" required="required" class="form-control form-white" placeholder="E-mail" name="email" >
 					<textarea class="form-control form-white" rows="5" id="comment" required="required" placeholder="Your question" name="message"></textarea>
 					<button type="submit" class="btn btn-submit" name="submit">Send your request</button>
-				</form>
+				</form> -->
 			</div>
 		</div>
 	</div>
