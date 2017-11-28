@@ -124,6 +124,7 @@ jQuery(function($) {
 		event.preventDefault();
 	});
 
+
     $('body').on('click', 'nav.original .navbar-nav a:not([data-toggle]), .slow-scroll,  .nav li a', function () {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             //event.stopPropagation();

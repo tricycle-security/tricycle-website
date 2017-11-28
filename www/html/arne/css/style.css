@@ -1458,3 +1458,9 @@ fieldset[disabled] .s-btn {
 .s-swiper__pagination-v1--dark .swiper-pagination-bullet-active {
   background: #13b1cd;
 }
+
+.icon-bar {
+    width: 25px !important;
+    height: 4px !important;
+    margin-right: 15px;
+}
