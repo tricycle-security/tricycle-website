@@ -104,7 +104,7 @@ jQuery(function($) {
 		$('.mobile-nav').addClass('active');
 	});
 
-	$('body').on('click', '.mobile-nav a', function(event) {
+    $('body').on('click', '.mobile-nav a, .slow-scroll', function (event) {
 		$('.mobile-nav').removeClass('active');
 		if(!this.hash) return;
 		event.preventDefault();
@@ -121,7 +121,8 @@ jQuery(function($) {
 		}
 	});
 
-	$('body').on('click', '.mobile-nav a.close-link', function(event) {
+
+    $('body').on('click', '.mobile-nav a.close-link', function(event) {
 		$('.mobile-nav').removeClass('active');
 		event.preventDefault();
 	});
