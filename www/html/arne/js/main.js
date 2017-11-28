@@ -104,7 +104,7 @@ jQuery(function($) {
 		$('.mobile-nav').addClass('active');
 	});
 
-    $('body').on('click', '.mobile-nav a, .slow-scroll', function (event) {
+    $('body').on('click', '.mobile-nav a', function (event) {
 		$('.mobile-nav').removeClass('active');
 		if(!this.hash) return;
 		event.preventDefault();
@@ -112,10 +112,13 @@ jQuery(function($) {
 			event.stopPropagation();
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            var distance = $(window).scrollTop() - target.offset().top;
+            distance = Math.sqrt(distance * distance) / 2;
+            console.log(distance);
 			if (target.length) {
 				$('html,body').animate({
 					scrollTop: target.offset().top
-				}, 1000);
+                }, distance);
 				return false;
 			}
 		}
@@ -127,15 +130,17 @@ jQuery(function($) {
 		event.preventDefault();
 	});
 
-	$('body').on('click', 'nav.original .navbar-nav a:not([data-toggle])', function() {
+    $('body').on('click', 'nav.original .navbar-nav a:not([data-toggle]), .slow-scroll', function () {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 			event.stopPropagation();
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            var distance = $(window).scrollTop() - target.offset().top;
+            distance = Math.sqrt(distance * distance) / 2;
 			if (target.length) {
 				$('html,body').animate({
 					scrollTop: target.offset().top
-				}, 1000);
+                }, distance);
 				return false;
 			}
 		}
